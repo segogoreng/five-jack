@@ -25,7 +25,7 @@ function buildChatMessages(records, userMap) {
         const action = getAction(record);
         const userId = getUserId(record);
         const nickname = userMap[userId];
-        
+
         if (action === 'Enter') {
             messages.push(nickname + " came in.");
         } else if (action === 'Leave') {
@@ -50,6 +50,3 @@ function getNickname(record) {
     const elements = record.split(' ');
     return elements[2];
 }
-
-const result = solution(["Enter uid1234 Muzi", "Enter uid4567 Prodo", "Leave uid1234", "Enter uid1234 Prodo", "Change uid4567 Ryan"]);
-console.log(result);
